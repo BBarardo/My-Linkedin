@@ -1,1 +1,55 @@
-<p>manage-projects works!</p>
+<div class="container-fluid">
+  <form [formGroup]="manageProjectsForm">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputProjectName">Project Name</label>
+        <input class="form-control" formControlName="projectName" id="inputProjectName" placeholder="Project Name"
+               type="text">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputProjectAlias">Project Alias</label>
+        <input class="form-control" formControlName="projectAlias" id="inputProjectAlias" placeholder="Project Alias"
+               type="text">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCompanyName">Company Name</label>
+      <input class="form-control" formControlName="companyName" id="inputCompanyName" placeholder="Company Name"
+             type="text">
+    </div>
+    <div class="form-group">
+      <label for="inputCompanyAddress">Company Address</label>
+      <input class="form-control" formControlName="companyAddress" id="inputCompanyAddress"
+             placeholder="Company Address" type="text">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input class="form-control" formControlName="city" id="inputCity" placeholder="Cuty" type="text">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select class="form-control" formControlName="state" id="inputState">
+          <option selected>Choose...</option>
+          <option>Lisboa</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input class="form-control" formControlName="zip" id="inputZip" placeholder="1234-123" type="text">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" id="gridCheck" type="checkbox">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <button (click)="saveProject()" class="btn btn-primary" type="submit">Save</button>
+  </form>
+</div>
